@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ag "TODO:" --ignore todos > todolist.txt
+
+# grab all TODOS in the folder and copy into a new textmate file

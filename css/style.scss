@@ -1,0 +1,286 @@
+$darkColor: darken(steelblue, 20%);
+$secondary: #df6843;
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: #fefefe;
+}
+
+.logo {
+	float: right;
+	color: $secondary;
+	font-weight: 100;
+	font-size: 24px;
+}
+
+.nav-tabs {
+	padding-top: 16px;
+	margin-left: -1px;
+	border-bottom: 1px solid $darkColor;
+	background: cornflowerblue;
+	
+	li {
+		color: green !important;
+		a {
+			color: $darkColor !important;
+		}
+		a:hover {
+			background: lighten(cornflowerblue, 5%);
+			border: 1px solid $darkColor !important;
+			border-bottom: 1px solid cornflowerblue !important;
+		}
+		
+		a:not([data-toggle="tab"]):hover {
+			background: cornflowerblue;
+			border: 1px solid cornflowerblue !important;
+			border-bottom: 1px solid $darkColor !important;
+		}
+		&.active {
+			a {
+				background: #fefefe !important;
+				border: 1px solid $darkColor !important;
+				border-bottom: 1px solid #fefefe !important;
+			}
+		}
+	}
+}
+
+.tab-content {
+	color: $darkColor;
+	padding: 1rem;
+	
+	h2 {
+		color: $secondary;
+	}
+}
+
+footer {
+	color: $secondary;
+	text-align: center;
+	font-weight: 100;
+}
+
+table {
+	width: 60%;
+	margin: 0 auto;
+	
+	td:not(:last-child) {
+		padding: 3px 10px;
+	}
+	tr {
+		margin-bottom: 3px;
+	}
+	
+	
+	thead {
+		border-bottom: 1px solid $darkColor;
+		text-align: center;
+		
+		tr {
+			height: 30px;
+			margin-bottom: 3px;
+			
+		}
+	}
+	
+	
+	tbody {
+		text-align: center;
+	}
+}
+
+.flights-display {
+
+}
+.flight {
+	display: inline-block;
+	
+	border: 1px solid;
+	width: 400px;
+	margin: 3rem 1.5rem;
+	position: relative;
+	
+	&:hover {
+		border: 1px solid steelblue;
+		color: darken(steelblue, 10%);
+		//.fa-globe {
+//			
+//		}
+	}
+	
+	.flight-nr {
+		margin: 1rem;
+		font-size: 2rem;
+		font-weight: 200;
+	}
+	
+	.places-wrap {
+		font-size: 3rem;
+		text-align: center;
+		font-weight: 500;
+	}
+	
+	.times-wrap {
+		text-align: center;
+		font-weight: 300;
+		color: $secondary;
+	}
+	
+	.price {
+		font-size: 2rem;
+		margin: 1rem;
+		font-weight: 100;
+	}
+	
+	.btnPick {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+	}
+	
+	.fa-globe {
+		font-size: 5rem;
+		position: absolute;
+		left: calc(50% - 2.5rem - 2.5px);
+		top: -2.5rem;
+		background: #fefefe;
+		border: 5px solid #fefefe;
+	}
+	
+	select {
+		width: 40px;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+	
+	p {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		
+		span {
+			color: $secondary;
+		}
+	}
+}
+
+.passengers {
+	display: inline-block;
+	
+	border: 1px solid;
+	width: 240px;
+	margin: 3rem 1.5rem;
+	position: relative;
+	padding: 1rem;
+	
+	&:hover {
+		border: 1px solid steelblue;
+		color: darken(steelblue, 10%);
+	}
+	
+	.fa-users {
+		font-size: 4rem;
+		position: absolute;
+		left: calc(50% - 2rem - 2.5px);
+		top: -2.5rem;
+		background: #fefefe;
+		border: 5px solid #fefefe;
+	}
+	
+	input {
+		margin-bottom: 5px;
+	}
+}
+
+#btnBuy {
+	margin-top: 30px;
+}
+
+.profile-forms-wrap {
+	width: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+	.signup {
+		float: left;
+		width: 250px;
+		padding-right: 70px;
+		padding-bottom: 30px;
+		border-right: 2px solid;
+	}
+	.login {
+		float: right;
+	}
+}
+
+.signup, .login {
+	width: 180px;
+//	margin: 0 auto;
+	
+	div {
+		overflow: hidden;
+		background: white;
+		padding: 5px;
+		margin-bottom: 5px;
+		border: 1px solid;	
+			
+		input{
+			float: right;
+			border: none;
+			outline: none;
+		}
+		
+		label {
+			color: #a9a9a9;
+			font-weight: 400;
+			
+			&:last-child {
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+h4 {
+//	text-align: center;
+	span {
+		color: $secondary;
+	}
+}
+
+small {
+	color: $secondary;
+	text-align: center;
+	display: block;
+}
+
+.credit-card-form {
+	width: 500px;
+	margin: 2rem auto;
+	border: 1px solid;
+	padding: 3rem 1rem 1rem;
+	position: relative;
+	
+	h4 {
+		text-align: center;
+		position: absolute;
+		top: -3rem;
+		left: calc(50% - 183px);
+		background: #fefefe;
+		padding: 1rem;
+	}
+}
